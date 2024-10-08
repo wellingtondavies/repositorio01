@@ -29,7 +29,7 @@ public class Main {
                     \n
                     1-CADASTRO DE FUNCIONÁRIOS: 
                     2-GERENCIAMENTO DE CARDÁPIO: 
-                    3-CADASTRO DE MESAS: 
+                    3-CADASTRO DE MESAS:|---|
                     4-REGISTRO DE PEDIDOS: 
                     5-ACOMPANHAMENTO DE VENDAS POR FUNCIONÁRIO: 
                     6-FECHAMENTO DE CONTA E FATURAMENTO: 
