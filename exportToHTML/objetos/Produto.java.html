@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Produto.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Produto.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">objetos</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Produto </span><span class="s2">{</span>
+    <span class="s0">private </span><span class="s1">String nomeOrder</span><span class="s2">;</span>
+    <span class="s0">private int </span><span class="s1">codigoItem</span><span class="s2">;</span>
+    <span class="s0">private double </span><span class="s1">precoItem</span><span class="s2">;</span>
+    <span class="s0">private boolean </span><span class="s1">disponivel</span><span class="s2">;</span>
+
+    <span class="s0">public </span><span class="s1">Produto</span><span class="s2">(</span><span class="s1">String nomeOrder</span><span class="s2">, </span><span class="s0">int </span><span class="s1">codigoItem</span><span class="s2">, </span><span class="s0">double </span><span class="s1">precoItem</span><span class="s2">, </span><span class="s0">boolean </span><span class="s1">disponivel</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">nomeOrder </span><span class="s2">= </span><span class="s1">nomeOrder</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">codigoItem </span><span class="s2">= </span><span class="s1">codigoItem</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">precoItem </span><span class="s2">= </span><span class="s1">precoItem</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">disponivel </span><span class="s2">= </span><span class="s1">disponivel</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">Produto</span><span class="s2">() {</span>
+
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getNomeOrder</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">nomeOrder</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setNomeOrder</span><span class="s2">(</span><span class="s1">String nomeOrder</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">nomeOrder </span><span class="s2">= </span><span class="s1">nomeOrder</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public int </span><span class="s1">getCodigoItem</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">codigoItem</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setCodigoItem</span><span class="s2">(</span><span class="s0">int </span><span class="s1">codigoItem</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">codigoItem </span><span class="s2">= </span><span class="s1">codigoItem</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public double </span><span class="s1">getPrecoItem</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">precoItem</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setPrecoItem</span><span class="s2">(</span><span class="s0">double </span><span class="s1">precoItem</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">precoItem </span><span class="s2">= </span><span class="s1">precoItem</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public boolean </span><span class="s1">isDisponivel</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">disponivel</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setDisponivel</span><span class="s2">(</span><span class="s0">boolean </span><span class="s1">disponivel</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">disponivel </span><span class="s2">= </span><span class="s1">disponivel</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">String toString</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s3">&quot;| nome = &quot; </span><span class="s2">+ </span><span class="s1">nomeOrder  </span><span class="s2">+</span>
+                <span class="s3">&quot;, codigo = &quot; </span><span class="s2">+ </span><span class="s1">codigoItem </span><span class="s2">+</span>
+                <span class="s3">&quot;, preco = &quot; </span><span class="s2">+ </span><span class="s1">precoItem </span><span class="s2">+</span>
+                <span class="s3">&quot;, disponibilidade = &quot; </span><span class="s2">+ </span><span class="s1">disponivel </span><span class="s2">+</span>
+                <span class="s3">'|'</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

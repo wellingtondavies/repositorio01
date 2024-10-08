@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>Funcionario.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Funcionario.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">objetos</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.*;</span>
+
+<span class="s0">public class </span><span class="s1">Funcionario </span><span class="s2">{</span>
+
+    <span class="s0">public static </span><span class="s1">Scanner scan </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+
+    <span class="s0">private </span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">Funcionario</span><span class="s2">&gt; </span><span class="s1">funcionarios </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ArrayList</span><span class="s2">&lt;</span><span class="s1">Funcionario</span><span class="s2">&gt;();</span>
+    <span class="s0">private </span><span class="s1">String nomeFuncionario</span><span class="s2">;</span>
+    <span class="s0">private int </span><span class="s1">idFuncionario</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String cargoFuncionario</span><span class="s2">;</span>
+    <span class="s0">private int </span><span class="s1">vendasFuncionario</span><span class="s2">;</span>
+
+    <span class="s0">public </span><span class="s1">Funcionario</span><span class="s2">(</span><span class="s1">String nomeFuncionario</span><span class="s2">, </span><span class="s0">int </span><span class="s1">idFuncionario</span><span class="s2">, </span><span class="s1">String cargoFuncionario</span><span class="s2">, </span><span class="s0">int </span><span class="s1">vendasFuncionario</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">nomeFuncionario </span><span class="s2">= </span><span class="s1">nomeFuncionario</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">idFuncionario </span><span class="s2">= </span><span class="s1">idFuncionario</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">cargoFuncionario </span><span class="s2">= </span><span class="s1">cargoFuncionario</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">vendasFuncionario </span><span class="s2">= </span><span class="s1">vendasFuncionario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">Funcionario</span><span class="s2">() {</span>
+
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getNomeFuncionario</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">nomeFuncionario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setNomeFuncionario</span><span class="s2">(</span><span class="s1">String nomeFuncionario</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">nomeFuncionario </span><span class="s2">= </span><span class="s1">nomeFuncionario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public int </span><span class="s1">getIdFuncionario</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">idFuncionario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setIdFuncionario</span><span class="s2">(</span><span class="s0">int </span><span class="s1">idFuncionario</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">idFuncionario </span><span class="s2">= </span><span class="s1">idFuncionario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getCargoFuncionario</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">cargoFuncionario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setCargoFuncionario</span><span class="s2">(</span><span class="s1">String cargoFuncionario</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">cargoFuncionario </span><span class="s2">= </span><span class="s1">cargoFuncionario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public int </span><span class="s1">getVendasFuncionario</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">vendasFuncionario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setVendasFuncionario</span><span class="s2">(</span><span class="s0">int </span><span class="s1">vendasFuncionario</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">vendasFuncionario </span><span class="s2">= </span><span class="s1">vendasFuncionario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">cadastraFuncionario</span><span class="s2">() {</span>
+      <span class="s0">boolean </span><span class="s1">cadastrado </span><span class="s2">= </span><span class="s0">true</span><span class="s2">;</span>
+      <span class="s0">while </span><span class="s2">(</span><span class="s1">cadastrado</span><span class="s2">) {</span>
+          <span class="s0">int </span><span class="s1">vendasGarcom </span><span class="s2">= </span><span class="s3">0</span><span class="s2">;</span>
+
+          <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Digite o nome do funcionario: </span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s2">);</span>
+          <span class="s1">String nomeFuncionario </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">next</span><span class="s2">();</span>
+
+          <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Digite o id do funcionario: </span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s2">);</span>
+          <span class="s0">int </span><span class="s1">idFuncionario </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+
+          <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Entre com  o cargo do funcionario: </span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s2">);</span>
+          <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;| garcom | cozinheiro | gerente: </span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s2">);</span>
+          <span class="s1">String cargoFuncionario </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">next</span><span class="s2">();</span>
+
+          <span class="s0">if</span><span class="s2">(</span><span class="s1">cargoFuncionario</span><span class="s2">.</span><span class="s1">equalsIgnoreCase</span><span class="s2">(</span><span class="s4">&quot;garcom&quot;</span><span class="s2">)) {</span>
+              <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Quantidade de vendas </span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s2">);</span>
+              <span class="s1">vendasGarcom </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+          <span class="s2">}</span>
+          <span class="s1">vendasFuncionario </span><span class="s2">= </span><span class="s1">vendasGarcom</span><span class="s2">;</span>
+          <span class="s1">funcionarios</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Funcionario</span><span class="s2">( </span><span class="s1">nomeFuncionario</span><span class="s2">,</span><span class="s1">idFuncionario</span><span class="s2">,</span><span class="s1">cargoFuncionario</span><span class="s2">,</span><span class="s1">vendasFuncionario </span><span class="s2">));</span>
+
+          <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Funcionario cadastrado com sucesso!</span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s2">);</span>
+          <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Deseja casastar mais funcionarios?: </span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s2">);</span>
+          <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;(1 - sim | 2 - não) </span><span class="s0">\n</span><span class="s4">&quot;</span><span class="s2">);</span>
+          <span class="s0">int </span><span class="s1">opcao </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+            <span class="s0">if</span><span class="s2">(</span><span class="s1">opcao </span><span class="s2">== </span><span class="s3">1</span><span class="s2">) {</span>
+                <span class="s1">cadastrado </span><span class="s2">= </span><span class="s0">true</span><span class="s2">;</span>
+            <span class="s2">}</span><span class="s0">else if</span><span class="s2">(</span><span class="s1">opcao </span><span class="s2">== </span><span class="s3">2</span><span class="s2">) {</span>
+                <span class="s1">cadastrado </span><span class="s2">= </span><span class="s0">false</span><span class="s2">;</span>
+            <span class="s2">}</span><span class="s0">else </span><span class="s2">{</span>
+                <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; erro &quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+      <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">listaFuncionarios</span><span class="s2">() {</span>
+        <span class="s0">for</span><span class="s2">(</span><span class="s1">Funcionario funcionario </span><span class="s2">: </span><span class="s1">funcionarios</span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">funcionario</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">String toString</span><span class="s2">() {</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">cargoFuncionario</span><span class="s2">.</span><span class="s1">equalsIgnoreCase</span><span class="s2">(</span><span class="s4">&quot;garcom&quot;</span><span class="s2">)) {</span>
+            <span class="s0">return </span><span class="s4">&quot;Funcionario{&quot; </span><span class="s2">+</span>
+                    <span class="s4">&quot;nomeFuncionario='&quot; </span><span class="s2">+ </span><span class="s1">nomeFuncionario </span><span class="s2">+ </span><span class="s4">'</span><span class="s0">\'</span><span class="s4">' </span><span class="s2">+</span>
+                    <span class="s4">&quot;, idFuncionario='&quot; </span><span class="s2">+ </span><span class="s1">idFuncionario </span><span class="s2">+ </span><span class="s4">'</span><span class="s0">\'</span><span class="s4">' </span><span class="s2">+</span>
+                    <span class="s4">&quot;, cargoFuncionario='&quot; </span><span class="s2">+ </span><span class="s1">cargoFuncionario </span><span class="s2">+ </span><span class="s4">'</span><span class="s0">\'</span><span class="s4">' </span><span class="s2">+</span>
+                    <span class="s4">&quot;, vendasFuncionario=&quot; </span><span class="s2">+ </span><span class="s1">vendasFuncionario </span><span class="s2">+</span>
+                    <span class="s4">'}'</span><span class="s2">;</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s0">return </span><span class="s4">&quot;Funcionario{&quot; </span><span class="s2">+</span>
+                    <span class="s4">&quot;nomeFuncionario='&quot; </span><span class="s2">+ </span><span class="s1">nomeFuncionario </span><span class="s2">+ </span><span class="s4">'</span><span class="s0">\'</span><span class="s4">' </span><span class="s2">+</span>
+                    <span class="s4">&quot;, idFuncionario='&quot; </span><span class="s2">+ </span><span class="s1">idFuncionario </span><span class="s2">+ </span><span class="s4">'</span><span class="s0">\'</span><span class="s4">' </span><span class="s2">+</span>
+                    <span class="s4">&quot;, cargoFuncionario='&quot; </span><span class="s2">+ </span><span class="s1">cargoFuncionario </span><span class="s2">+ </span><span class="s4">'}'</span><span class="s2">;</span>
+
+
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>

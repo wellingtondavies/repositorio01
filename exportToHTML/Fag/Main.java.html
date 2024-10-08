@@ -1,0 +1,209 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">Fag</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">objetos</span><span class="s2">.*;</span>
+
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.*;</span>
+
+<span class="s0">public class </span><span class="s1">Main </span><span class="s2">{</span>
+    <span class="s3">// instancia publicas para ter acesso sempre aos metodos do Main;</span>
+    <span class="s0">private static </span><span class="s1">Cardapio cardapio </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Cardapio</span><span class="s2">();</span>
+    <span class="s0">public static </span><span class="s1">Scanner scan  </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+    <span class="s0">private static </span><span class="s1">ListaMesa listaMesa </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ListaMesa</span><span class="s2">();</span>
+    <span class="s0">private static </span><span class="s1">Funcionario funcionario </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Funcionario</span><span class="s2">();</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s0">boolean </span><span class="s1">escolha </span><span class="s2">= </span><span class="s0">true</span><span class="s2">;</span>
+        <span class="s0">boolean </span><span class="s1">dados </span><span class="s2">= </span><span class="s0">true</span><span class="s2">;</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;escolha entre as opções &quot;</span><span class="s2">);</span>
+        <span class="s0">while </span><span class="s2">(</span><span class="s1">escolha</span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;&quot;&quot; 
+                    1-Cadastro de Funcionários: 
+                    2-Gerenciamento de Cardápio: 
+                    3-Cadastro de Mesas: 
+                    4-Registro de Pedidos: 
+                    5-Acompanhamento de Vendas por Funcionário: 
+                    6-Fechamento de Conta e Faturamento: 
+                    7-Relatório de Faturamento do Restaurante: 
+                    &quot;&quot;&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;qual opcâo deseja&quot;</span><span class="s2">);</span>
+            <span class="s0">int </span><span class="s1">opcao </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+            <span class="s0">switch </span><span class="s2">(</span><span class="s1">opcao</span><span class="s2">) {</span>
+                <span class="s0">case </span><span class="s5">1</span><span class="s2">:{</span>
+                    <span class="s1">funcionario</span><span class="s2">.</span><span class="s1">cadastraFuncionario</span><span class="s2">();</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;</span><span class="s0">\n </span><span class="s4">deseja listar os funcionarios?:(1 - sim | 2 - não) &quot;</span><span class="s2">);</span>
+                    <span class="s0">int </span><span class="s1">opcao2 </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+                    <span class="s0">switch </span><span class="s2">(</span><span class="s1">opcao2</span><span class="s2">) {</span>
+                        <span class="s0">case </span><span class="s5">1</span><span class="s2">:{</span>
+                            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; funcionarios cadastrados (1 - sim| 2 - não! &quot;</span><span class="s2">);</span>
+                            <span class="s1">funcionario</span><span class="s2">.</span><span class="s1">listaFuncionarios</span><span class="s2">();</span>
+                            <span class="s0">break</span><span class="s2">;</span>
+                        <span class="s2">}</span>
+                        <span class="s0">default</span><span class="s2">:{</span>
+                            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; funcionarios cadastrados com sucesso! &quot;</span><span class="s2">);</span>
+                        <span class="s2">}</span>
+                    <span class="s2">}</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s2">}</span>
+                <span class="s0">case </span><span class="s5">2</span><span class="s2">:{</span>
+                   <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; criando cardapio: &quot;</span><span class="s2">);</span>
+                   <span class="s1">cardapio</span><span class="s2">();</span>
+                   <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;</span><span class="s0">\n </span><span class="s4">deseja listar o cardapio?: (1 - sim | 2 não) &quot;</span><span class="s2">);</span>
+                   <span class="s0">int </span><span class="s1">opcao2 </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+                   <span class="s0">switch </span><span class="s2">(</span><span class="s1">opcao2</span><span class="s2">) {</span>
+                       <span class="s0">case </span><span class="s5">1</span><span class="s2">:{</span>
+                           <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; listando cardapio&quot;</span><span class="s2">);</span>
+                           <span class="s1">mostraCardapio</span><span class="s2">(</span><span class="s1">cardapio</span><span class="s2">);</span>
+                           <span class="s0">break</span><span class="s2">;</span>
+                       <span class="s2">}</span>
+                       <span class="s0">default</span><span class="s2">:{</span>
+                           <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; seguindo: &quot;</span><span class="s2">);</span>
+                           <span class="s0">break</span><span class="s2">;</span>
+                       <span class="s2">}</span>
+                   <span class="s2">}</span>
+                   <span class="s0">break</span><span class="s2">;</span>
+                <span class="s2">}</span>
+                <span class="s0">case </span><span class="s5">3</span><span class="s2">:{</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; criando mesas: &quot;</span><span class="s2">);</span>
+                    <span class="s1">registroMesa</span><span class="s2">();</span>
+                        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; mesas cadastradas com sucesso! deseja lista-las?:</span><span class="s0">\n </span><span class="s4">&quot;</span><span class="s2">);</span>
+                        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; (1 - sim | 2 - não)&quot;</span><span class="s2">);</span>
+                        <span class="s0">int </span><span class="s1">opcao2 </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+                            <span class="s0">switch </span><span class="s2">(</span><span class="s1">opcao2</span><span class="s2">) {</span>
+                                    <span class="s0">case </span><span class="s5">1</span><span class="s2">:{</span>
+                                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; listando mesas&quot;</span><span class="s2">);</span>
+                                    <span class="s1">mostraMesa</span><span class="s2">(</span><span class="s1">listaMesa</span><span class="s2">);</span>
+                                    <span class="s0">break</span><span class="s2">;</span>
+                                    <span class="s2">}</span>
+                                    <span class="s0">default</span><span class="s2">:{</span>
+                                        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; seguindo: &quot;</span><span class="s2">);</span>
+                                    <span class="s2">}</span>
+                    <span class="s2">}</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s2">}</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+        <span class="s1">funcionario</span><span class="s2">.</span><span class="s1">cadastraFuncionario</span><span class="s2">();</span>
+        <span class="s1">funcionario</span><span class="s2">.</span><span class="s1">listaFuncionarios</span><span class="s2">();</span>
+        <span class="s1">cardapio</span><span class="s2">();</span>
+        <span class="s1">mostraCardapio</span><span class="s2">(</span><span class="s1">cardapio</span><span class="s2">);</span>
+        <span class="s1">registroMesa</span><span class="s2">();</span>
+        <span class="s1">mostraMesa</span><span class="s2">(</span><span class="s1">listaMesa</span><span class="s2">);</span>
+
+    <span class="s2">}</span>
+    <span class="s0">public static void </span><span class="s1">cardapio</span><span class="s2">() {</span>
+
+        <span class="s0">boolean </span><span class="s1">rodar </span><span class="s2">= </span><span class="s0">true</span><span class="s2">;</span>
+        <span class="s0">while </span><span class="s2">(</span><span class="s1">rodar</span><span class="s2">) {</span>
+
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; Cardapio atual &quot;</span><span class="s2">);</span>
+
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Digite o nome do prato: &quot;</span><span class="s2">);</span>
+            <span class="s1">String nome </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">next</span><span class="s2">();</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Digite o codigo do produto: &quot;</span><span class="s2">);</span>
+            <span class="s0">int </span><span class="s1">codigo </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Digite o preço do produto: &quot;</span><span class="s2">);</span>
+            <span class="s0">double </span><span class="s1">preco </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextDouble</span><span class="s2">();</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Disponibilidade definida automaticamente para sim: &quot;</span><span class="s2">);</span>
+            <span class="s0">boolean </span><span class="s1">disponivel </span><span class="s2">= </span><span class="s0">true</span><span class="s2">;</span>
+
+            <span class="s1">Produto produto </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Produto</span><span class="s2">(</span><span class="s1">nome</span><span class="s2">, </span><span class="s1">codigo</span><span class="s2">, </span><span class="s1">preco</span><span class="s2">, </span><span class="s1">disponivel</span><span class="s2">);</span>
+            <span class="s1">cardapio</span><span class="s2">.</span><span class="s1">addProduto</span><span class="s2">(</span><span class="s1">produto</span><span class="s2">);</span>
+
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Produto adicionado com sucesso!&quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; Adicionar mais um?: &quot;</span><span class="s2">);</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;</span><span class="s0">\n </span><span class="s4">| 1 - sim | 2 - não | &quot;</span><span class="s2">);</span>
+
+            <span class="s0">int </span><span class="s1">opc </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+                <span class="s0">if </span><span class="s2">(</span><span class="s1">opc </span><span class="s2">== </span><span class="s5">1</span><span class="s2">) {</span>
+                    <span class="s1">rodar </span><span class="s2">= </span><span class="s0">true</span><span class="s2">;</span>
+                <span class="s2">}</span><span class="s0">else</span><span class="s2">{</span>
+                    <span class="s1">rodar </span><span class="s2">= </span><span class="s0">false</span><span class="s2">;</span>
+                <span class="s2">}</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+    <span class="s0">public static void </span><span class="s1">mostraCardapio</span><span class="s2">(</span><span class="s1">Cardapio cardapio</span><span class="s2">) {</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; exibindo cardapio &quot;</span><span class="s2">);</span>
+
+        <span class="s0">for</span><span class="s2">(</span><span class="s1">Produto produto </span><span class="s2">: </span><span class="s1">cardapio</span><span class="s2">.</span><span class="s1">getListaProdutos</span><span class="s2">()){</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">produto</span><span class="s2">.</span><span class="s1">toString</span><span class="s2">());</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+    <span class="s0">public static void </span><span class="s1">registroMesa</span><span class="s2">(){</span>
+        <span class="s0">boolean </span><span class="s1">rodar </span><span class="s2">= </span><span class="s0">true</span><span class="s2">;</span>
+        <span class="s0">while </span><span class="s2">(</span><span class="s1">rodar</span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Digite o ID da mesa &quot;</span><span class="s2">);</span>
+            <span class="s0">int </span><span class="s1">id </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Digite a capacidade da mesa &quot;</span><span class="s2">);</span>
+            <span class="s0">int </span><span class="s1">capacidade </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Mesa disponivel? &quot;</span><span class="s2">);</span>
+            <span class="s0">boolean </span><span class="s1">disponivel </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextBoolean</span><span class="s2">();</span>
+            <span class="s1">Mesa mesa </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Mesa</span><span class="s2">(</span><span class="s1">id</span><span class="s2">, </span><span class="s1">capacidade</span><span class="s2">, </span><span class="s1">disponivel</span><span class="s2">);</span>
+            <span class="s1">listaMesa</span><span class="s2">.</span><span class="s1">addMesa</span><span class="s2">(</span><span class="s1">mesa</span><span class="s2">);</span>
+
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;deseja adicionar mais mesas? &quot;</span><span class="s2">);</span>
+            <span class="s0">boolean </span><span class="s1">adicionar </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextBoolean</span><span class="s2">();</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">adicionar</span><span class="s2">) {</span>
+                <span class="s1">rodar </span><span class="s2">= </span><span class="s0">true</span><span class="s2">;</span>
+            <span class="s2">}</span><span class="s0">else </span><span class="s2">{</span>
+                <span class="s1">rodar </span><span class="s2">= </span><span class="s0">false</span><span class="s2">;</span>
+            <span class="s2">}</span>
+
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+    <span class="s0">public static void </span><span class="s1">mostraMesa</span><span class="s2">(</span><span class="s1">ListaMesa listaMesa</span><span class="s2">) {</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; exibindo mesas disponiveis &quot;</span><span class="s2">);</span>
+
+        <span class="s0">for</span><span class="s2">(</span><span class="s1">Mesa mesa1 </span><span class="s2">: </span><span class="s1">listaMesa</span><span class="s2">.</span><span class="s1">getListaMesas</span><span class="s2">() ){</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">mesa1</span><span class="s2">.</span><span class="s1">toString</span><span class="s2">());</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+    <span class="s0">public static void </span><span class="s1">pedidos</span><span class="s2">(){</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; pedidos &quot;</span><span class="s2">);</span>
+        <span class="s0">boolean </span><span class="s1">rodar </span><span class="s2">= </span><span class="s0">true</span><span class="s2">;</span>
+        <span class="s0">while </span><span class="s2">(</span><span class="s1">rodar</span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Deseja ver o cardapio? (1 - sim | 2 - não &quot;</span><span class="s2">);</span>
+            <span class="s0">int </span><span class="s1">opcao2 </span><span class="s2">= </span><span class="s1">scan</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+            <span class="s0">if</span><span class="s2">(</span><span class="s1">opcao2 </span><span class="s2">&gt; </span><span class="s5">0 </span><span class="s2">&amp;&amp; </span><span class="s1">opcao2 </span><span class="s2">&lt; </span><span class="s5">3</span><span class="s2">){</span>
+                <span class="s0">switch </span><span class="s2">(</span><span class="s1">opcao2</span><span class="s2">) {</span>
+                    <span class="s0">case </span><span class="s5">1</span><span class="s2">:{</span>
+                        <span class="s1">mostraCardapio</span><span class="s2">(</span><span class="s1">cardapio</span><span class="s2">);</span>
+                        <span class="s0">break</span><span class="s2">;</span>
+                    <span class="s2">}</span>
+                    <span class="s0">default</span><span class="s2">:{</span>
+                        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; seguindo: &quot;</span><span class="s2">);</span>
+                    <span class="s2">}</span>
+                <span class="s2">}</span>
+            <span class="s2">}</span><span class="s0">else</span><span class="s2">{</span>
+                <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot; erro ao ver o cardapio! &quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+
+</pre>
+</body>
+</html>
